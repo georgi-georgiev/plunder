@@ -1,1 +1,4 @@
 # plunder
+- pluck
+- string
+- thrill
