@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  plunder:
+    container_name: "plunder"
+    image: ${DOCKER_REGISTRY-}plunder
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - my-proxy-net
+    volumes: 
+      - ./coverage:/etc/cover/
+
+networks:
+  my-proxy-net:
+    external:
+      name: custom_network  
+      
